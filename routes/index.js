@@ -26,7 +26,7 @@ router.get('/add', async (req, res) => {
 
 
   const client = await pool.connect();
-  const name = 'Emp02-Badge-' + Date.now();
+  const name = 'Emp02-MeetRes-' + Date.now();
   const extId = uuidv4();
   const startTime = new Date();
   const duration = 30;
