@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 var app = express();
 
 // view engine setup
@@ -40,6 +42,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
+/*
 //connect to Postgres DB
 const { Client } = require('pg');
 
@@ -59,3 +62,4 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
   }
   client.end();
 });
+*/
