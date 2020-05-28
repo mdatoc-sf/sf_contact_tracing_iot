@@ -36,7 +36,7 @@ router.get('/add', async (req, res) => {
   name, startTime, duration, extId, locId);
   client.release();  
 
-  res.render('add', { title: 'Express' });
+  res.render('add', { title: 'Express', res: results });
 }
 catch(err){
     console.log(err);
