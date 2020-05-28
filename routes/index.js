@@ -33,7 +33,7 @@ router.get('/add', async (req, res) => {
   const locId = '1315w000000De3SAAS';
 
   const results = await client.query("INSERT INTO salesforce.ContactEncounter(name,starttime,encounterduration,external_id__c,locationid) Values($1,$2,$3,$4,$5)",
-  name, startTime, duration, extId, locId);
+  [name, startTime, duration, extId, locId]);
   client.release();  
 
   res.render('add', { title: 'Express', res: results });
