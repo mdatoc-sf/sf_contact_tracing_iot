@@ -5,6 +5,9 @@ This app is meant to be deployed to an existing Heroku App with Heroku Connect a
 To use:
 1) Clone Repo
 2) In file: routes/index.js
+
         a) Line 5: Update with your Postgres DB connection info from Heroku
+        
         b) Line 33: Update with your Location ID from Health Cloud IDO
+        
 3) Build and Deploy to your Heroku app
